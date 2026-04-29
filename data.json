@@ -1,0 +1,63 @@
+[
+  {
+    "id": "1777500594896",
+    "name": "Jane Doe",
+    "email": "jane@acme.com",
+    "company": "Acme Corp",
+    "stage": "Closed",
+    "createdAt": "2026-04-29T22:09:54.895Z",
+    "updatedAt": "2026-04-29T23:15:54.489Z",
+    "stageHistory": [
+      {
+        "stage": "Lead",
+        "changedAt": "2026-04-29T22:09:54.895Z"
+      },
+      {
+        "stage": "Contacted",
+        "changedAt": "2026-04-29T23:09:12.722Z"
+      },
+      {
+        "stage": "Qualified",
+        "changedAt": "2026-04-29T23:15:39.306Z"
+      },
+      {
+        "stage": "Trial/Demo",
+        "changedAt": "2026-04-29T23:15:47.241Z"
+      },
+      {
+        "stage": "Closed",
+        "changedAt": "2026-04-29T23:15:54.489Z"
+      }
+    ]
+  },
+  {
+    "id": "1777500776474",
+    "name": "Michael Brown",
+    "email": "michael@megacorp.com",
+    "company": "MegaCorp Industries",
+    "stage": "Qualified",
+    "createdAt": "2026-04-29T22:12:56.474Z",
+    "updatedAt": "2026-04-29T23:44:50.188Z",
+    "stageHistory": [
+      {
+        "stage": "Qualified",
+        "changedAt": "2026-04-29T22:12:56.474Z"
+      }
+    ]
+  },
+  {
+    "id": "1777500785113",
+    "name": "Sarah Lee",
+    "email": "sarah@startco.com",
+    "company": "StartCo",
+    "stage": "Contacted",
+    "createdAt": "2026-04-29T22:13:05.113Z",
+    "updatedAt": "2026-04-29T22:13:05.113Z",
+    "stageHistory": [
+      {
+        "stage": "Contacted",
+        "changedAt": "2026-04-29T22:13:05.113Z"
+      }
+    ]
+  }
+]
