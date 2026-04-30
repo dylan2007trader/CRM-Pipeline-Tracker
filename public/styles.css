@@ -1,0 +1,123 @@
+/* page styling */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	background-color: lightgray;
+}
+
+header {
+	background-color: navy;
+	color: white;
+	padding: 15px;
+}
+
+header h1 {
+	margin: 0;
+}
+
+/* add customer section */
+#addSection {
+	background-color: white;
+	padding: 15px;
+	border-bottom: 1px solid gray;
+}
+
+#addForm input {
+	padding: 6px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+#addForm select {
+	padding: 6px;
+	margin-right: 5px;
+}
+
+#addForm button {
+	padding: 6px 16px;
+	background-color: blue;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+#addMessage {
+	color: red;
+}
+
+/* filter section */
+#filterSection {
+	background-color: white;
+	padding: 10px 15px;
+	border-bottom: 1px solid gray;
+}
+
+#searchInput {
+	padding: 6px;
+	width: 300px;
+	margin-right: 10px;
+}
+
+#stageFilter {
+	padding: 6px;
+}
+
+/* kanban board with 5 columns */
+#board {
+	display: flex;
+	padding: 15px;
+}
+
+.column {
+	flex: 1;
+	background-color: white;
+	margin-right: 10px;
+	padding: 10px;
+	border: 1px solid gray;
+}
+
+.column h3 {
+	margin-top: 0;
+	color: navy;
+	border-bottom: 2px solid gray;
+	padding-bottom: 5px;
+}
+
+/* customer cards */
+.card {
+	background-color: lightgray;
+	padding: 10px;
+	margin-bottom: 8px;
+	border: 1px solid gray;
+}
+
+.card-name {
+	font-weight: bold;
+}
+
+.card-company {
+	color: gray;
+	font-size: 13px;
+}
+
+.card-email {
+	color: gray;
+	font-size: 12px;
+	margin-bottom: 8px;
+}
+
+.card-actions button {
+	padding: 4px 8px;
+	border: none;
+	cursor: pointer;
+	margin-right: 5px;
+	color: white;
+}
+
+.move-button {
+	background-color: green;
+}
+
+.delete-button {
+	background-color: red;
+}

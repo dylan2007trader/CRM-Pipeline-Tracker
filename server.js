@@ -26,6 +26,9 @@ function writeCustomers(customers){
 //express parses data to req.body
 app.use(express.json());
 
+// for frontend file from public folder
+app.use(express.static('public'))
+
 
 
 

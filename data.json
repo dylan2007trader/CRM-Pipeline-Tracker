@@ -35,13 +35,21 @@
     "name": "Michael Brown",
     "email": "michael@megacorp.com",
     "company": "MegaCorp Industries",
-    "stage": "Qualified",
+    "stage": "Closed",
     "createdAt": "2026-04-29T22:12:56.474Z",
-    "updatedAt": "2026-04-29T23:44:50.188Z",
+    "updatedAt": "2026-04-30T09:01:32.567Z",
     "stageHistory": [
       {
         "stage": "Qualified",
         "changedAt": "2026-04-29T22:12:56.474Z"
+      },
+      {
+        "stage": "Trial/Demo",
+        "changedAt": "2026-04-30T09:01:31.634Z"
+      },
+      {
+        "stage": "Closed",
+        "changedAt": "2026-04-30T09:01:32.567Z"
       }
     ]
   },
@@ -50,13 +58,129 @@
     "name": "Sarah Lee",
     "email": "sarah@startco.com",
     "company": "StartCo",
-    "stage": "Contacted",
+    "stage": "Closed",
     "createdAt": "2026-04-29T22:13:05.113Z",
-    "updatedAt": "2026-04-29T22:13:05.113Z",
+    "updatedAt": "2026-04-30T09:01:30.565Z",
     "stageHistory": [
       {
         "stage": "Contacted",
         "changedAt": "2026-04-29T22:13:05.113Z"
+      },
+      {
+        "stage": "Qualified",
+        "changedAt": "2026-04-30T09:01:24.838Z"
+      },
+      {
+        "stage": "Trial/Demo",
+        "changedAt": "2026-04-30T09:01:28.819Z"
+      },
+      {
+        "stage": "Closed",
+        "changedAt": "2026-04-30T09:01:30.565Z"
+      }
+    ]
+  },
+  {
+    "id": "1777539852093",
+    "name": "Alyssa Ackerman",
+    "email": "alyssa@yahoo.com",
+    "company": "BottomUpCookies",
+    "stage": "Closed",
+    "createdAt": "2026-04-30T09:04:12.093Z",
+    "updatedAt": "2026-04-30T09:24:38.658Z",
+    "stageHistory": [
+      {
+        "stage": "Lead",
+        "changedAt": "2026-04-30T09:04:12.093Z"
+      },
+      {
+        "stage": "Contacted",
+        "changedAt": "2026-04-30T09:12:58.343Z"
+      },
+      {
+        "stage": "Qualified",
+        "changedAt": "2026-04-30T09:16:03.982Z"
+      },
+      {
+        "stage": "Trial/Demo",
+        "changedAt": "2026-04-30T09:24:31.635Z"
+      },
+      {
+        "stage": "Closed",
+        "changedAt": "2026-04-30T09:24:38.658Z"
+      }
+    ]
+  },
+  {
+    "id": "1777540086106",
+    "name": "Dylan Ackerman",
+    "email": "dylan@skillify.com",
+    "company": "Skillify",
+    "stage": "Closed",
+    "createdAt": "2026-04-30T09:08:06.106Z",
+    "updatedAt": "2026-04-30T09:15:47.801Z",
+    "stageHistory": [
+      {
+        "stage": "Contacted",
+        "changedAt": "2026-04-30T09:08:06.106Z"
+      },
+      {
+        "stage": "Qualified",
+        "changedAt": "2026-04-30T09:15:40.598Z"
+      },
+      {
+        "stage": "Trial/Demo",
+        "changedAt": "2026-04-30T09:15:47.168Z"
+      },
+      {
+        "stage": "Closed",
+        "changedAt": "2026-04-30T09:15:47.801Z"
+      }
+    ]
+  },
+  {
+    "id": "1777540318342",
+    "name": "Ryan James",
+    "email": "rgackerm@gmail.com",
+    "company": "Pickleball Inc",
+    "stage": "Closed",
+    "createdAt": "2026-04-30T09:11:58.342Z",
+    "updatedAt": "2026-04-30T09:15:48.884Z",
+    "stageHistory": [
+      {
+        "stage": "Lead",
+        "changedAt": "2026-04-30T09:11:58.342Z"
+      },
+      {
+        "stage": "Contacted",
+        "changedAt": "2026-04-30T09:11:59.606Z"
+      },
+      {
+        "stage": "Qualified",
+        "changedAt": "2026-04-30T09:12:00.197Z"
+      },
+      {
+        "stage": "Trial/Demo",
+        "changedAt": "2026-04-30T09:15:41.142Z"
+      },
+      {
+        "stage": "Closed",
+        "changedAt": "2026-04-30T09:15:48.884Z"
+      }
+    ]
+  },
+  {
+    "id": "1777541331369",
+    "name": "Alex Thomas",
+    "email": "hello@gmail.com",
+    "company": "Microsoft",
+    "stage": "Lead",
+    "createdAt": "2026-04-30T09:28:51.369Z",
+    "updatedAt": "2026-04-30T09:28:51.369Z",
+    "stageHistory": [
+      {
+        "stage": "Lead",
+        "changedAt": "2026-04-30T09:28:51.369Z"
       }
     ]
   }

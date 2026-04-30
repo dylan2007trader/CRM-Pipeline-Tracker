@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CRM Pipeline Tracker</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>CRM Pipeline Tracker</h1>
+	</header>
+
+
+    <!-- section to add a customer -->
+    <section id="addSection">
+	<h2>Add Customer</h2>
+	<form id="addForm">
+		<input type="text" id="addName" placeholder="Name" required>
+		<input type="email" id="addEmail" placeholder="Email" required>
+		<input type="text" id="addCompany" placeholder="Company" required>
+		<select id="addStage">
+			<option value="Lead">Lead</option>
+			<option value="Contacted">Contacted</option>
+			<option value="Qualified">Qualified</option>
+			<option value="Trial/Demo">Trial/Demo</option>
+			<option value="Closed">Closed</option>
+		</select>
+		<button type="submit">Add</button>
+	</form>
+	<p id="addMessage"></p>
+    <!-- for error messages -->
+    </section>
+
+
+    <!-- section for filtering customers for the ?search and ?stage parameters -->
+    <section id="filterSection">
+	<input type="text" id="searchInput" placeholder="Search by name or company...">
+	<select id="stageFilter">
+		<option value="">All stages</option>
+		<option value="Lead">Lead</option>
+		<option value="Contacted">Contacted</option>
+		<option value="Qualified">Qualified</option>
+		<option value="Trial/Demo">Trial/Demo</option>
+		<option value="Closed">Closed</option>
+	</select>
+    </section>
+
+    <!-- this is the kanban board which is the main display
+    i had to look this up
+    data-stage is data attribute of the element 
+    all columns initially empty till customers are added in-->
+    <section id="board">
+	<div class="column" data-stage="Lead">
+		<h3>Lead</h3>
+		<div class="cards" id="cards-Lead"></div>
+	</div>
+	<div class="column" data-stage="Contacted">
+		<h3>Contacted</h3>
+		<div class="cards" id="cards-Contacted"></div>
+	</div>
+	<div class="column" data-stage="Qualified">
+		<h3>Qualified</h3>
+		<div class="cards" id="cards-Qualified"></div>
+	</div>
+    <div class="column" data-stage="Trial/Demo">
+		<h3>Trial/Demo</h3>
+		<div class="cards" id="cards-Trial-Demo"></div>
+	</div>
+    <div class="column" data-stage="Closed">
+		<h3>Closed</h3>
+		<div class="cards" id="cards-Closed"></div>
+	</div>
+    </section>
+
+    <script src = "app.js"></script>
+
+</body>
+</html>
