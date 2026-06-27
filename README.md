@@ -1,83 +1,126 @@
 # CRM Pipeline Tracker
 
-I build a simple CRM pipeline tracker for a take-home project for Skillify. The track I chose was the Fullstack track. I want to show I can connect the frontend and backend and build both up even for a small project. I also wanted to work on my skills through this project a little bit, so I took more time than the expected as I liked the concept. I made the backend with Node/Express API with JSON for storage. I built the frontend with HTML/CSS/JS that connects to backend with fetch.
-<img width="2830" height="1412" alt="image" src="https://github.com/user-attachments/assets/31342e8b-e9cb-49eb-9146-aef6174c78f3" />
+A lightweight, fullstack CRM built as a take-home project for Skillify's Fullstack track. Manage your sales pipeline through a kanban-style board with a Node/Express REST API backend and a plain HTML/CSS/JS frontend — no build tools or frameworks required to run it.
 
-## Tech Setup
-I picked JS over React as I am more comfortable with regular JS even though I have worked with both. This helped me work on the API design over figuring out React framework. I picked a JSON file over a database to keep it simple as someone just needs Node to run this project.
-
-## How to Run
-### 1.) install Node.js in a terminal by running:
-
-node --version
-
-### 2.) clone the repository :
-
-git clone https://github.com/dylan2007trader/CRM-Pipeline-Tracker.git
-
-cd CRM-Pipeline-Tracker
-
-### 3.) install express
-
-npm install express
-
-### 4.) start the server
-
-node server.js
-
-You should see "Server running at http://localhost:3000"
-
-Leave the terminal open while using the app, and press ctrl c on computer to stop server
-
-### 5.) in a browser, type http://localhost:3000/ and press enter
-
-
-The app comes loaded with customers in data.json, you can start with empty list by replacing the contents in the file with [].
-
-## Test API Directly
-You can also test the API directly without the UI. I tested this using curl in powershell.
-
-### List all customers
-curl http://localhost:3000/api/customers
-
-### Filter by stage
-curl http://localhost:3000/api/customers?stage=Lead
-
-### Create a customer
-curl -Method POST -Uri http://localhost:3000/api/customers -ContentType "application/json" -Body '{"name":"Test User","email":"test@test.com","company":"TestCo","stage":"Lead"}'
-
-### Move a customer to a new stage (replace ID)
-curl -Method POST -Uri http://localhost:3000/api/customers/PASTE_ID/stage -ContentType "application/json" -Body '{"stage":"Contacted"}'
+---
 
 ## Features
--add customers wit name, email, company, and starting stage
 
--display all customers on kanban board by stage
+- **Kanban board** — customers are displayed in columns by pipeline stage (Lead → Contacted → Proposal → Closed)
+- **Add customers** — create a customer with name, email, company, and starting stage
+- **Advance stage** — move customers forward through the pipeline with one click
+- **Delete customers** — remove a customer with a confirmation prompt to prevent accidents
+- **Search** — filter the board live by customer name or company
+- **Filter by stage** — show only customers in a specific stage
+- **Stage history** — every stage change is timestamped and stored in `data.json`
 
--move customers to next stage
+---
 
--delete customers with a confirmation prompt
+## Tech Stack
 
--search a customer by name or company
+| Layer | Technology |
+|---|---|
+| Frontend | HTML, CSS, vanilla JavaScript (Fetch API) |
+| Backend | Node.js, Express |
+| Storage | JSON file (`data.json`) |
+| API testing | curl (PowerShell) |
 
--filter by stage
+**Why vanilla JS over React?** This project prioritized a clean REST API design over framework complexity. Vanilla JS kept the frontend lightweight and let the Node/Express backend be the focus.
 
--stage history tracking of each customer can be viewed in the data.json
+**Why JSON over a database?** Keeping storage as a flat file means anyone can clone and run the project with just `node server.js` — no database setup required.
 
-## Future Improvements
+---
 
-- edit customer info from the frontend view an edit button on each customer car. I implemented this in the backend with the PUT endpoint but I didn't connect it to the UI
+## Project Structure
 
-- authenticatation in order for customer info to be secure. I would add a login for each user to have their own pipeline
+```
+CRM-Pipeline-Tracker/
+├── public/
+│   ├── index.html      # Kanban board UI
+│   ├── app.js          # Frontend logic (fetch, render, events)
+│   └── styles.css      # Styling
+├── server.js           # Express API (CRUD + stage history)
+├── data.json           # Persistent customer storage
+└── package.json
+```
 
-- deployment into Railway and Vercel so it can be accessed without local setup
+---
 
-- tests for the API instead of having to manually test with curl
+## Getting Started
 
-- add back button for each customer card so they can move back in the progress or a drag for the user to drag the customer into any stage
+### Prerequisites
+- Node.js installed ([download here](https://nodejs.org/))
 
-- add a real database like PostgreSQL so it handles large amounts of data
+### 1. Clone the repo
 
-- let the user see the history timeline for each customer, it shows up in data.json but not in the frontend now
+```bash
+git clone https://github.com/dylan2007trader/CRM-Pipeline-Tracker.git
+cd CRM-Pipeline-Tracker
+```
 
-- better UI, I would like the look of the site look more appealing and crispy, I am very much a beginner in CSS styling at the moment
+### 2. Install dependencies
+
+```bash
+npm install express
+```
+
+### 3. Start the server
+
+```bash
+node server.js
+# Server running at http://localhost:3000
+```
+
+Open your browser and go to **http://localhost:3000**
+
+> The app comes pre-loaded with sample customers in `data.json`. To start with an empty list, replace the file contents with `[]`.
+
+---
+
+## API Reference
+
+The backend exposes a REST API you can test directly:
+
+```bash
+# List all customers
+curl http://localhost:3000/api/customers
+
+# Filter by stage
+curl http://localhost:3000/api/customers?stage=Lead
+
+# Create a customer
+curl -Method POST -Uri http://localhost:3000/api/customers `
+  -ContentType "application/json" `
+  -Body '{"name":"Jane Smith","email":"jane@example.com","company":"Acme","stage":"Lead"}'
+
+# Advance a customer to a new stage (replace ID)
+curl -Method POST -Uri http://localhost:3000/api/customers/CUSTOMER_ID/stage `
+  -ContentType "application/json" `
+  -Body '{"stage":"Contacted"}'
+
+# Delete a customer
+curl -Method DELETE -Uri http://localhost:3000/api/customers/CUSTOMER_ID
+```
+
+---
+
+## Roadmap
+
+- [x] Kanban board with stage columns
+- [x] Add / delete customers
+- [x] Search and filter
+- [x] Stage history tracking (backend)
+- [x] PUT endpoint for editing customer info (backend only)
+- [ ] Edit customer info from the UI
+- [ ] Stage history timeline visible in the UI
+- [ ] Drag-and-drop to move customers between any stage
+- [ ] User authentication so each user has their own pipeline
+- [ ] PostgreSQL or SQLite for production-scale storage
+- [ ] Deploy to Railway (backend) + Vercel (frontend)
+- [ ] Automated API tests
+
+---
+
+## Author
+
+Dylan Ackerman · [LinkedIn](https://www.linkedin.com/in/dylan-ackerman-2015a638a/) · [dackerm2007@gmail.com](mailto:dackerm2007@gmail.com)
